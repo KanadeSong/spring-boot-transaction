@@ -8,13 +8,24 @@
         <version>2.2.2.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.ljj</groupId>
     <artifactId>spring-boot-transaction</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-transaction</name>
+    <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
 
+    <modules>
+        <module>transaction-config</module>
+        <module>transaction-configuration</module>
+        <module>transaction-common</module>
+        <module>multi-transaction</module>
+    </modules>
+
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
 
@@ -31,21 +42,6 @@
             <version>2.1.1</version>
         </dependency>
 
-        <!--  -->
-        <!-- druid -->
-<!--        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.1.21</version>
-        </dependency>-->
-
-        <!-- 使用alibaba的spring boot druid数据库连接池  -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
-            <version>1.1.10</version>
-        </dependency>
-
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -56,7 +52,6 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
-
 
         <dependency>
             <groupId>log4j</groupId>
